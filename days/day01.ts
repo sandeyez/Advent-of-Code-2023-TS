@@ -1,4 +1,4 @@
-import { getInputForDay, presentDayResults } from "../utils";
+import { getInputForDay, isDigit, presentDayResults } from "../utils";
 
 const DAY = 1;
 type ParsedInput = string[];
@@ -7,10 +7,6 @@ function getInput(): ParsedInput {
   const lines = getInputForDay(DAY);
 
   return lines;
-}
-
-function isDigit(char: string) {
-  return char >= "0" && char <= "9";
 }
 
 function part1(input: ParsedInput) {

@@ -135,3 +135,8 @@ export function findInGrid<T>(grid: Grid<T>, value: T): Point | null {
 
   return null;
 }
+
+// String Utils
+export function isDigit(char: string) {
+  return char >= "0" && char <= "9";
+}
