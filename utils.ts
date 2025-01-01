@@ -106,10 +106,24 @@ export function getNextDirection(
   return directions[(currentIndex + 1) % 4];
 }
 
-export function getPointNeighbours(point: Point): Point[] {
-  return Object.values(directionToVectorMap).map((vector) =>
-    addPoints(point, vector)
-  );
+export function getPointNeighbours(
+  point: Point,
+  includeDiagonal = false
+): Point[] {
+  return [
+    { x: point.x, y: point.y - 1 },
+    { x: point.x + 1, y: point.y },
+    { x: point.x, y: point.y + 1 },
+    { x: point.x - 1, y: point.y },
+    ...(includeDiagonal
+      ? [
+          { x: point.x + 1, y: point.y - 1 },
+          { x: point.x + 1, y: point.y + 1 },
+          { x: point.x - 1, y: point.y + 1 },
+          { x: point.x - 1, y: point.y - 1 },
+        ]
+      : []),
+  ];
 }
 
 // Grid Utils
