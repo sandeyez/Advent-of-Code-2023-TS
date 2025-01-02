@@ -154,3 +154,16 @@ export function findInGrid<T>(grid: Grid<T>, value: T): Point | null {
 export function isDigit(char: string) {
   return char >= "0" && char <= "9";
 }
+
+// Math Utils
+export function leastCommonMultiple(a: number, b: number) {
+  return Math.abs(a * b) / greatestCommonDivisor(a, b);
+}
+
+export function greatestCommonDivisor(a: number, b: number): number {
+  if (b === 0) {
+    return a;
+  }
+
+  return greatestCommonDivisor(b, a % b);
+}
