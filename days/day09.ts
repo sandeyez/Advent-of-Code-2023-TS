@@ -67,8 +67,6 @@ function part2(input: ParsedInput) {
 
     return acc + value;
   }, 0);
-
-  return "Not implemented";
 }
 
 presentDayResults(DAY, getInput, part1, part2);
