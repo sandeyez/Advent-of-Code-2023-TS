@@ -10,14 +10,12 @@ function getInput(): ParsedInput {
 }
 
 function part1(input: ParsedInput) {
-  const lines = input;
+  console.log(input);
 
   return "Not implemented";
 }
 
 function part2(input: ParsedInput) {
-  const lines = input;
-
   return "Not implemented";
 }
 
