@@ -81,6 +81,10 @@ export function manhattanDistance(a: Point, b: Point): number {
   return Math.abs(a.x - b.x) + Math.abs(a.y - b.y);
 }
 
+export function arePointsEqual(a: Point, b: Point): boolean {
+  return a.x === b.x && a.y === b.y;
+}
+
 // Direction Utils
 export type Direction = "N" | "E" | "S" | "W";
 
